@@ -8,7 +8,7 @@
 // console.log(min(3, 1));
 // console.log(min(1, 1));
 
-
+//Max call stack error
 // function isEven(num) {
 //     if(num == 0) return true;
 //     if(num == -1) return false;
@@ -17,6 +17,15 @@
 
 // console.log(isEven(50));
 // console.log(isEven(75));
+
+//Solution
+function isEven(num) {
+    if(num == 0) return true;
+    else if(num == 1) return false;
+    else if(num < 0) return isEven(-num);
+    else return isEven(num - 2);    
+}
+console.log(isEven(-2));
 
 function countBs(str) {
     let count = 0;
